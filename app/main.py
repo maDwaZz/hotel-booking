@@ -4,7 +4,11 @@ from datetime import date
 from fastapi import FastAPI, Query, Depends
 from pydantic import BaseModel
 
+from app.bookings.router import router as router_bookings
+
 app = FastAPI()
+
+app.include_router(router_bookings)
 
 
 @dataclass

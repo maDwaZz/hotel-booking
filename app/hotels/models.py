@@ -10,6 +10,6 @@ class Hotels(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
     location: Mapped[str]
-    services: Mapped[dict | None] = mapped_column(JSON)
+    services: Mapped[list[str] | None] = mapped_column(JSON)
     rooms_quantity: Mapped[int]
     image_id: Mapped[int | None]
